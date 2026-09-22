@@ -35,8 +35,8 @@ Modifica el programa anterior para que además se muestre tu dirección y tu nú
 public class DatosPersonales {
     public static void main(String[] args) {
         System.out.println("Jaime");
-        System.out.println("Calle Ejemplo, 123");
-        System.out.println("600000000");
+        System.out.println("Calle Castilla, 5");
+        System.out.println("652274382");
     }
 }
 ```
