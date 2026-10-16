@@ -1,21 +1,27 @@
 
 import java.util.Scanner;
 
-class Main {
+public class Main {
     public static void main(String[] args) {
-        Scanner teclado = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
-        System.out.print("Por favor, introduzca un numero entero positivo: ");
-        String numero = teclado.nextLine();
+        System.out.print("Introduzca un número entero positivo: ");
+        long numero = sc.nextLong();
 
-        System.out.print("Introduzca la posicion a partir de la cual quiere partir el numero: ");
-        int posicion = teclado.nextInt();
+        System.out.print("Introduzca la posición donde quiere insertar: ");
+        int posicion = sc.nextInt();
 
-        String parte1 = numero.substring(0, posicion - 1);
-        String parte2 = numero.substring(posicion - 1);
+        System.out.print("Introduzca el dígito que quiere insertar: ");
+        int digito = sc.nextInt();
 
-        System.out.println("Los numeros partidos son el " + parte1 + " y el " + parte2);
+        String texto = String.valueOf(numero);
 
-        teclado.close();
+        String resultado = texto.substring(0, posicion - 1)
+                + digito
+                + texto.substring(posicion - 1);
+
+        System.out.println("El número resultante es " + resultado);
+
+        sc.close();
     }
-}   
+}
